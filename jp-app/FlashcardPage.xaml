@@ -1,0 +1,13 @@
+&lt;ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jp_app.FlashcardPage"&gt;
+
+    &lt;StackLayout&gt;
+        &lt;Label x:Name="QuestionLabel" Text="{Binding Question}" /&gt;
+        &lt;Label x:Name="AnswerLabel" Text="{Binding Answer}" /&gt;
+        &lt;Button x:Name="PreviousButton" Text="Previous" Clicked="OnPreviousButtonClicked" /&gt;
+        &lt;Button x:Name="NextButton" Text="Next" Clicked="OnNextButtonClicked" /&gt;
+    &lt;/StackLayout&gt;
+
+&lt;/ContentPage&gt;
+
