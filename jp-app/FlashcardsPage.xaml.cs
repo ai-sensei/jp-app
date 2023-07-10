@@ -1,4 +1,6 @@
 using Xamarin.Forms;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace jp_app
 {
@@ -15,4 +17,3 @@ namespace jp_app
         }
     }
 }
-
