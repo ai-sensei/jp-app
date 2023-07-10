@@ -1,3 +1,7 @@
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
+using jp_app.Models; // Assuming Flashcard is in the Models namespace
 using Xamarin.Forms;
 
 namespace jp_app
