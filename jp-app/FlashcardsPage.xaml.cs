@@ -1,19 +1,10 @@
 using Xamarin.Forms;
-
-namespace jp_app
-{
 using Newtonsoft.Json;
 using System.IO;
 using System.Collections.Generic;
 
 namespace jp_app
 {
-    public class Flashcard
-    {
-        public string Word { get; set; }
-        public string Definition { get; set; }
-    }
-
     public partial class FlashcardsPage : ContentPage
     {
         private List<Flashcard> flashcards;
@@ -23,7 +14,7 @@ namespace jp_app
         {
             InitializeComponent();
 
-            var json = File.ReadAllText("Resources/Flashcards.json");
+            var json = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Resources/Flashcards.json"));
             flashcards = JsonConvert.DeserializeObject<List<Flashcard>>(json);
             starredFlashcards = new List<Flashcard>();
         }
@@ -36,7 +27,7 @@ namespace jp_app
             starredFlashcards.Add(flashcard);
 
             var starredJson = JsonConvert.SerializeObject(starredFlashcards);
-            File.WriteAllText("StarredFlashcards.json", starredJson);
+            File.WriteAllText(Path.Combine(Directory.GetCurrentDirectory(), "StarredFlashcards.json"), starredJson);
         }
     }
 }
