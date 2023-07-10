@@ -25,6 +25,9 @@ namespace jp_app
         {
             // Navigate to the Flashcards page
             Navigation.PushAsync(new FlashcardsPage());
+
+            // Save the starred flashcards to disk
+            // Add your code here
         }
     }
 }
