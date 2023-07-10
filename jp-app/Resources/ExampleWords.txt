@@ -1,0 +1,7 @@
+jp-app/Resources/ExampleWords.txt:
+
+Word 1: Definition 1
+Word 2: Definition 2
+Word 3: Definition 3
+...
+
