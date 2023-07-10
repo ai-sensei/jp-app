@@ -47,6 +47,19 @@ namespace jp_app
         {
             // Save the starred flashcards to disk
             // Implement the logic to save the starred flashcards to disk
+            // TODO: Implement the logic to save the starred flashcards to disk
+            // For example, you can use the following code to save the flashcards to a file:
+            // string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "StarredFlashcards.txt");
+            // using (StreamWriter writer = new StreamWriter(filePath))
+            // {
+            //     foreach (Flashcard flashcard in flashcards)
+            //     {
+            //         if (flashcard.IsStarred)
+            //         {
+            //             writer.WriteLine($"{flashcard.Word}:{flashcard.Definition}");
+            //         }
+            //     }
+            // }
         }
     }
 }
