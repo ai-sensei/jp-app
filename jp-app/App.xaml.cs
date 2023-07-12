@@ -1,12 +1,12 @@
-﻿namespace jp_app;
-
-public partial class App : Application
+namespace jp_app
 {
-	public App()
-	{
-		InitializeComponent();
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+            MainPage = new MainPage();
+        }
+    }
 }
-
