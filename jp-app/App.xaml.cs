@@ -1,12 +1,24 @@
-﻿namespace jp_app;
+using System.Globalization;
+using jp_app.Services;
 
-public partial class App : Application
+namespace jp_app
 {
-	public App()
-	{
-		InitializeComponent();
+    public partial class App : Application
+    {
+        public App()
+        {
+            InitializeComponent();
 
-		MainPage = new AppShell();
-	}
+            // Get the user's system language
+            ILanguageService languageService = new LanguageService();
+            string systemLanguage = languageService.GetSystemLanguage();
+
+            // Set the application's culture to the system language
+            CultureInfo culture = new CultureInfo(systemLanguage);
+            CultureInfo.CurrentCulture = culture;
+            CultureInfo.CurrentUICulture = culture;
+
+            MainPage = new AppShell();
+        }
+    }
 }
-
